@@ -2,8 +2,8 @@ const express = require("express"),
   mongoose = require("mongoose"),
   cors = require("cors"),
   bodyParser = require("body-parser"),
-  database = require("./database/database");
-//   path = require("path");
+  database = require("./database/database"),
+  path = require("path");
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -19,6 +19,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use("/blogs", blogsRoutes);
+
+  //*Path Frontend
+  if(process.env.PORT ==='production'){
+    app.use(express.static(path.join(__dirname,'../build')))
+
+    app.get('*',(req,res,next) =>{
+      res.sendFile(path.join(__dirname,'../build/index.html'))
+    })
+  }
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => console.log("Connected to port: " + port));
