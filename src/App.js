@@ -17,7 +17,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="header">
-          <nav className="navbar navbar-light bg-light">
+          <nav className="navbar bg-light">
             <Container>
               <a href=" " className="navbar-brand">
                 <Link to="/" className="nav-link">
