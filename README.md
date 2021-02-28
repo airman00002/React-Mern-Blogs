@@ -1,2 +1,2 @@
 ﻿# React-Mern-Blogs
-https://react-mern-bolgs.herokuapp.com/
+https://react-mern-blogs.herokuapp.com/
