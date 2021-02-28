@@ -9,7 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"nodemon app",
+    "start":"node app.js",
+    "server":"nodemon app.js",
+    "dev":"concurrently \"npm run server\"" ,
     "heroku": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "keywords": [],
