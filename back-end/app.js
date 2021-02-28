@@ -21,7 +21,7 @@ app.use(cors());
 app.use("/blogs", blogsRoutes);
 
   //*Path Frontend
-  if(process.env.PORT ==='production'){
+  if(process.env.NODE_ENV ==='production'){
     app.use(express.static(path.join(__dirname,'../build')))
 
     app.get('*',(req,res,next) =>{

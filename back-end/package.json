@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"nodemon app" ,
+    "server":"nodemon app",
     "heroku": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "keywords": [],
